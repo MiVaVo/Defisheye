@@ -1,0 +1,7 @@
+*.avi
+.idea
+.idea/*
+__pycache__
+__pycache__/*
+*.MOV
+old/*
