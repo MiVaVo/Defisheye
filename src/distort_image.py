@@ -81,8 +81,11 @@ class ImageRadialDistorter:
     def numpy_sol_finder(self, intput):
         return self.solution_finder(x_new=intput[0],
                                     y_new=intput[1])
+
     @staticmethod
     def draw_image(img):
-        random_id_of_img=str(np.random.randint(0,10000,1)[0])
-        cv2.imshow("img_fish"+str(random_id_of_img),img);cv2.waitKey(0);cv2.destroyAllWindows()
+        random_id_of_img = str(np.random.randint(0, 10000, 1)[0])
+        cv2.imshow("img_fish" + str(random_id_of_img), img);
+        cv2.waitKey(0);
+        cv2.destroyAllWindows()
         pass

@@ -26,7 +26,6 @@ def return_n_of_section(img, threshold=600, angle_th=10):
 
 
 def return_n_of_lines(img, threshold):
-
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     edges = cv2.Canny(gray, 50, 150, apertureSize=3)
     lines = cv2.HoughLines(image=edges,

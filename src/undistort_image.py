@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+
 from src.utils import return_n_of_section
 
 
@@ -7,10 +8,10 @@ class UndistortImageOnLines:
     def __init__(self, line_min_threshold=340, angle_max_threshold=5):
         self.line_min_threshold = line_min_threshold
         self.angle_max_threshold = angle_max_threshold
-        self.img_fish=None
-        self.img_fish_lined=None
-        self.img_undistorted=None
-        self.img_undistorted_lines=None
+        self.img_fish = None
+        self.img_fish_lined = None
+        self.img_undistorted = None
+        self.img_undistorted_lines = None
 
     def configure_undistort_parameters(self, img):
         size = img.shape
@@ -53,8 +54,8 @@ class UndistortImageOnLines:
                                                           self.K,
                                                           D=D_found,
                                                           Knew=self.Knew)
-        lines, self.img_undistorted_lines= return_n_of_section(self.img_undistorted,
-                                                               threshold=self.line_min_threshold)
+        lines, self.img_undistorted_lines = return_n_of_section(self.img_undistorted,
+                                                                threshold=self.line_min_threshold)
         pass
 
     @staticmethod
