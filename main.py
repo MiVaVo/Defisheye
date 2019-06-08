@@ -15,3 +15,4 @@ if __name__ == "__main__":
     UnDistortClass = UndistortImageOnLines(line_min_threshold=100, angle_max_threshold=2)
     UnDistortClass.undistort_image(img_fish)
     UnDistortClass.draw_all_results(UnDistortClass)
+    UndistortImageOnLines.save_all_results(UnDistortClass)

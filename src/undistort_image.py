@@ -67,3 +67,11 @@ class UndistortImageOnLines:
         cv2.waitKey(0);
         cv2.destroyAllWindows()
         pass
+
+    @staticmethod
+    def save_all_results(undistorted_image_class,path="result_imgs"):
+        cv2.imwrite(path+"/"+"Initial_distorted_(fisheyed)_image.jpg", undistorted_image_class.img_fish)
+        cv2.imwrite(path+"/"+"Initial_image_with_found_lines.jpg", undistorted_image_class.img_fish_lined)
+        cv2.imwrite(path+"/"+"Undistorted_image.jpg", undistorted_image_class.img_undistorted)
+        cv2.imwrite(path+"/"+"Undistorted_image_with_found_lines.jpg", undistorted_image_class.img_undistorted_lines)
+        pass

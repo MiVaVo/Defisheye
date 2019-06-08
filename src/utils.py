@@ -15,7 +15,7 @@ def return_n_of_section(img, threshold=600, angle_th=10):
                             minLineLength=minLineLength,
                             maxLineGap=maxLineGap)
     lines = lines[[decide_on_line(i, angle_th) for i in lines]]
-    print(lines.shape[0], "N OF PART LINES")
+    print(lines.shape[0], "part lines detected with current configs of undistortion")
     img_plot = img.copy()
 
     for line in lines:
